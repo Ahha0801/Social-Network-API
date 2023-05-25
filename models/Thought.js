@@ -1,14 +1,18 @@
 const { Schema, model } = require('mongoose');
+const dateFormat = require('../utils/helpers')
 
-const courseSchema = new Schema(
+const thoughtSchema = new Schema(
   {
-    courseName: {
+    thoughtText: {
       type: String,
       required: true,
+      minLength: 1,
+      maxLength: 280
     },
-    inPerson: {
-      type: Boolean,
-      default: true,
+    createdAt: {
+      type: Date,
+      default: Date.now,
+      get: time => dateFormat(time)
     },
     startDate: {
       type: Date,
@@ -33,6 +37,6 @@ const courseSchema = new Schema(
   }
 );
 
-const Course = model('course', courseSchema);
+const Thought = model('thought', thoughtSchema);
 
-module.exports = Course;
+module.exports = Thought;
