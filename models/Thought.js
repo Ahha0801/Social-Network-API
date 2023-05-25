@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const reactionSchema = require('./Reaction')
 const dateFormat = require('../utils/helpers')
 
 const thoughtSchema = new Schema(
@@ -14,28 +15,24 @@ const thoughtSchema = new Schema(
       default: Date.now,
       get: time => dateFormat(time)
     },
-    startDate: {
-      type: Date,
-      default: Date.now(),
+    username: {
+      type: String,
+      required: true
     },
-    endDate: {
-      type: Date,
-      default: () => new Date(+new Date() + 84 * 24 * 60 * 60 * 1000),
-    },
-    students: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: 'Student',
-      },
-    ],
+    reactions: [reactionSchema],
   },
   {
     toJSON: {
-      virtuals: true,
+      virtual: true,
+      getter: true
     },
     id: false,
   }
 );
+
+thoughtSchema.virtual('reactionCount').get(function() {
+  return this.reactions.length
+})
 
 const Thought = model('thought', thoughtSchema);
 
