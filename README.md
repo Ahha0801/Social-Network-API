@@ -1,7 +1,8 @@
 ## Social Network API
+License used for this project - MIT
 
 ## Description
-API for a social network that uses a MongoDB database so that the website can handle large amounts of unstructured data, Express.js for routing, Mongoose ODM, and the moment package to format time stamps.
+API for a social network web application where users can share their thoughts, react to friends' thoughts, and create a friend list. It uses Express.js for routing, a MongoDB database, the Mongoose ODM, and native JavaScript Date object to format timestamps. The seed data is created using Insomnia
 
 ## Table of Contents
 - [Description](#description)
@@ -10,7 +11,6 @@ API for a social network that uses a MongoDB database so that the website can ha
 - [Technologies](#technologies)
 - [Contribution](#contribution)
 - [Contact Information](#contact-information)
-
 
 
 ## Installation
