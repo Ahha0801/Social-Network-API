@@ -1,5 +1,8 @@
 ## Social Network API
 
+## Description
+API for a social network that uses a MongoDB database so that the website can handle large amounts of unstructured data, Express.js for routing, Mongoose ODM, and the moment package to format time stamps.
+
 ## Table of Contents
 - [Description](#description)
 - [Installation](#installation)
@@ -8,8 +11,7 @@
 - [Contribution](#contribution)
 - [Contact Information](#contact-information)
 
-## Description
-API for a social network that uses a MongoDB database so that the website can handle large amounts of unstructured data, Express.js for routing, Mongoose ODM, and the moment package to format time stamps.
+
 
 ## Installation
 Node.js downloaded
@@ -20,8 +22,6 @@ mongo/DB
 
 ## Usage
 Walk-through video link: 
-
-
 
 Screen shots:
 
