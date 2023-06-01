@@ -19,6 +19,6 @@ module.exports = {
   },
   // Update a thoughts
   updateThoughts(req, res) {
-
+ // testing// 
   },
 };
